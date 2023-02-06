@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: shpotify_production
-  username: shpotify
-  password: <%= ENV["SHPOTIFY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
