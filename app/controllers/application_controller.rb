@@ -5,6 +5,8 @@ class ApplicationController < ActionController::API
     rescue_from StandardError, with: :unhandled_error
     rescue_from ActionController::InvalidAuthenticityToken,
     with: :invalid_authenticity_token
+
+    # rescue_from BrewException, with: :handle_brew_exception
     
     protect_from_forgery with: :exception
     before_action :snake_case_params, :attach_authenticity_token
