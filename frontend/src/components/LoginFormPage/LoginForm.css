@@ -1,0 +1,193 @@
+.logo1 {
+    display: flex;
+    /* display: block; */
+    /* margin: auto; */
+    width: 50%;
+    max-width: 500px;
+    /* height: auto; */
+}
+
+.officialLoginLogo {
+    margin-top: -60px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+}
+
+.loginForm {
+    color: black;
+    /* border: 1px solid black; */
+    height: fit-content;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica";
+    font-size: 13px;
+    /* display: grid; */
+    /* place-items: center; */
+    border-top: 1px solid lightgray;
+
+    border-bottom: 1px solid lightgray;
+}
+
+
+.loginFormHeader {
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: center;
+
+    /* margin-top: 25px; */
+    margin-bottom: 25px;
+}
+
+/* .logoImg > img{
+    display: flex;
+    margin-left: 420px;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+} */
+
+
+
+#loginLabel {
+    font-weight: bold;
+}
+
+#loginInput {
+    width: 450px;
+    height: 45px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-indent: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* place-items: center; */
+}
+
+#loginInput::placeholder {
+    font-size: 14px;
+}
+
+.loginPage {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.347);
+    display: grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    place-content: center;
+    /* place-items: center; */
+}
+
+.loginButtonDiv {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+    margin-top: -10px;
+}
+
+.demoUserButtonDiv {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+    margin-top: -10px;
+}
+.loginButton {
+    background-color: #1ed760;
+    font-weight: bold;
+    font-size: 14px;
+    height: 55px;
+    /* width: 140px; */
+    width: 400px;
+    justify-content: center;
+    border-radius: 40px;
+    border: none;
+    
+    margin-left: 2.5px;
+    /* margin: 0 auto; */
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.loginButton:hover {
+    background-color: #1fdf64;
+
+    height: 57px;
+    width: 425px;
+    font-size: 15px;
+
+    margin-left: 0px;
+
+    margin-top: 29px;
+    margin-bottom: 19px;
+}
+
+.demoUserButton {
+    background-color: #1ed760;
+    font-weight: bold;
+    font-size: 14px;
+    height: 55px;
+    width: 400px;
+    justify-content: center;
+    border-radius: 40px;
+    border: none;
+    
+    margin-left: 2.5px;
+    /* margin: 0 auto; */
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.demoUserButton:hover {
+    background-color: #1fdf64;
+
+    height: 57px;
+    width: 425px;
+    font-size: 15px;
+
+    margin-left: 0px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.loginDiv {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.noAccount {
+    margin: 0 auto;
+    margin-top: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.signupLinkButton {
+    margin-top: 25px;
+    width: 400px;
+    border-radius: 40px;
+    padding: 15px 31px; /* real values 13px 31px */
+
+    background-color: transparent;
+    border: 1px solid #878787;
+
+    color: #6a6a6a;
+    font-weight: 700;
+
+    letter-spacing: 0.100em; /* real value 0.107em */
+
+    /* transition: .25s; */
+}
+
+.signupLinkButton:hover {
+    border-color: black;
+
+    /* transition: .25s; */
+}
+
