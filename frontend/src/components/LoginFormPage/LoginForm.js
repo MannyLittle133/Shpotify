@@ -60,6 +60,13 @@ const LoginForm = () => {
 
       <h1 className="loginFormHeader">To continue, log in to Shpotify.</h1>
 
+      {/* <div className='aboutMeLinksDiv'> */}
+        {/* <button className="linkdin" type="submit">Linkdin</button> */}
+        {/* <br/> */}
+        {/* <button className="gitHub" type="submit">Github</button> */}
+        {/* <button onClick={handleDemoUserLoginForm} className="demoUserButton" type="submit">Demo User</button> */}
+      {/* </div> */}
+
       <label id="loginLabel">
         Email Address or Username
       </label>
@@ -91,6 +98,7 @@ const LoginForm = () => {
       <div className='demoUserButtonDiv'>
         <button onClick={handleDemoUserLoginForm} className="demoUserButton" type="submit">Demo User</button>
       </div>
+      {/* <p className='space'>im just here to make space ;)</p> */}
 
     </form>
     <p className='noAccount'>Don't have an account?</p>

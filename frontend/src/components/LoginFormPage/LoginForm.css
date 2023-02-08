@@ -1,3 +1,9 @@
+/* .space {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+
 .logo1 {
     display: flex;
     /* display: block; */
@@ -25,8 +31,10 @@
     /* display: grid; */
     /* place-items: center; */
     border-top: 1px solid lightgray;
-
+    /* border-top */
     border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
+    
 }
 
 
@@ -85,6 +93,51 @@
     justify-content: center;
 
     margin-top: -10px;
+}
+
+.aboutMeLinksDiv {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+}
+
+.linkdin {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 55px;
+    /* width: 140px; */
+    width: 400px;
+    justify-content: center;
+    border-radius: 40px;
+    border: none;
+    
+    margin-left: 2.5px;
+    /* margin: 0 auto; */
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.gitHub {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 55px;
+    /* width: 140px; */
+    width: 400px;
+    justify-content: center;
+    border-radius: 40px;
+    border: none;
+    
+    margin-left: 2.5px;
+    /* margin: 0 auto; */
+
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .demoUserButtonDiv {
@@ -166,13 +219,14 @@
     margin-top: 35px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    /* border-top: 1px solid lightgray; */
 }
 
 .signupLinkButton {
     margin-top: 25px;
     width: 400px;
     border-radius: 40px;
-    padding: 15px 31px; /* real values 13px 31px */
+    padding: 15px 31px; 
 
     background-color: transparent;
     border: 1px solid #878787;
