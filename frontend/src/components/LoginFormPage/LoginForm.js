@@ -54,18 +54,23 @@ const LoginForm = () => {
       <img className="officialLoginLogo" src={whiteLogo} alt="LogLogo" />
     </div>
     <form className='loginForm' onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      <div className='loginFormErrors'>
+        
+          {errors.map(error => <p className="errors" key={error}><i class="fa-solid fa-circle-exclamation"></i> {error}</p>)}
+        
+      </div>
 
       <h1 className="loginFormHeader">To continue, log in to Shpotify.</h1>
 
-      {/* <div className='aboutMeLinksDiv'> */}
-        {/* <button className="linkdin" type="submit">Linkdin</button> */}
+      <div className='aboutMeLinksDiv'>
+        {/* <a href="https://www.linkedin.com/in/manny-little-460224243/">
+        <button>Visit my LinkedIn page</button>
+        </a> */}
+
         {/* <br/> */}
         {/* <button className="gitHub" type="submit">Github</button> */}
         {/* <button onClick={handleDemoUserLoginForm} className="demoUserButton" type="submit">Demo User</button> */}
-      {/* </div> */}
+      </div>
 
       <label id="loginLabel">
         Email Address or Username

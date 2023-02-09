@@ -1,5 +1,5 @@
 import React from "react";
-import logoImg from "./shpotify_logo_login_cropped.jpg";
+import logoImg from "../logos/shpotify_logo_login_cropped.jpg";
 
 const LoginLogo = () => {
     return (

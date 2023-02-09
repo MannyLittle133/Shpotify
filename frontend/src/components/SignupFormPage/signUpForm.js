@@ -76,13 +76,15 @@ function SignupFormPage() {
 
         <form className="signupForm" onSubmit={handleSubmit}>
             
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
+        <div className='loginFormErrors'>
+        
+        {errors.map(error => <p className="errors" key={error}><i class="fa-solid fa-circle-exclamation"></i> {error}</p>)}
+        
+        </div>
 
-            <h1 className="signupFormHeader">Sign up with your email address</h1>
+            <h1 className="signupFormHead">Sign up with your email address</h1>
 
-            <label id="signupLabel">
+            <label id="signupTitle">
                 What's your email?
             <input
                 id="signupInput"
@@ -94,7 +96,7 @@ function SignupFormPage() {
             />
             </label>
 
-            <label id="signupLabel">
+            <label id="signupTitle">
                 Confirm your Email
             <input
                 id="signupInput"
@@ -106,7 +108,7 @@ function SignupFormPage() {
             />
             </label>
 
-            <label id="signupLabel">
+            <label id="signupTitle">
                 Password
             <input
                 id="signupInput"
@@ -118,7 +120,7 @@ function SignupFormPage() {
             />
             </label>
 
-            <label id="signupLabel">
+            <label id="signupTitle">
                 What should we call you?
             <input
                 id="signupInput"
@@ -129,7 +131,7 @@ function SignupFormPage() {
                 placeholder="Enter a profile name."
             />
             </label>
-            <p className="signupComment">This appears on your profile.</p>
+            <p className="signupText">This appears on your profile.</p>
             <br/>
             <div className="signupTerms">
             <p className="signupComment1">By clicking on sign-up, you agree to Shpotify's <a href="https://www.spotify.com/us/legal/end-user-agreement/" className="loginLink">Terms and Conditions of Use.</a></p>
