@@ -4,6 +4,9 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage/signUpForm";
 import Navigation from "./components/Navigation";
 import HomePageSideBar from "./components/HomePageSideBar";
+import HomePage from "./components/HomePageSideBar/index";
+import TopBar from "./components/HomePageTopBar/homePageTopBar";
+
 
 function App() {
   return (
@@ -17,9 +20,9 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/">
-            <div>
-              <h1>Shpotify home page</h1>
-            </div>
+              {/* <HomePageSideBar /> */}
+              <TopBar/>
+              <HomePage/>
           </Route>
         </Switch>
     </>

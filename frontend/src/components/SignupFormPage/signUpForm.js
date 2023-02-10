@@ -134,10 +134,10 @@ function SignupFormPage() {
             <p className="signupText">This appears on your profile.</p>
             <br/>
             <div className="signupTerms">
-            <p className="signupComment1">By clicking on sign-up, you agree to Shpotify's <a href="https://www.spotify.com/us/legal/end-user-agreement/" className="loginLink">Terms and Conditions of Use.</a></p>
+            <p className="signupComment1">By clicking on sign-up, you agree to Shpotify's <a href="https://media.tenor.com/SSY2V0RrU3IAAAAM/rick-roll-rick-rolled.gif" className="loginLink">Terms and Conditions of Use.</a></p>
             {/* <br/> */}
             <p className="signupComment2">To learn more about how Spotify collects, uses, shares and protects your personal data,</p>
-            <p className="signupComment3">please read <a href="https://www.spotify.com/us/legal/privacy-policy/" className="loginLink">Shpotify's Privacy Policy.</a></p>
+            <p className="signupComment3">please read <a href="https://media.tenor.com/SSY2V0RrU3IAAAAM/rick-roll-rick-rolled.gif" className="loginLink">Shpotify's Privacy Policy.</a></p>
             </div>
             <div className='signupButtonsDiv'>
                 <button className="signupButton" type="submit">Sign Up</button>

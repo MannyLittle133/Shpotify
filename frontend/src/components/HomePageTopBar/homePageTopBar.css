@@ -1,0 +1,14 @@
+.topBar {
+    display: flex;
+    /* margin-top: px; */
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #000000;
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 20px;
+}
