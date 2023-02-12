@@ -1,14 +1,20 @@
 import React from "react";
+import "./SongsIndexItem.css"
 
 const SongsIndexItem = ({ song }) => {
     return (
-        <li>
-            <p>fdsfsd</p>
-            <p style={{ fontWeight: "800", color: "blue"}}>{song.title}</p>
+        <div className="backDrop">
+            
+        
+
+        <li className="songList">
+            <img src={song.album_photo_url} alt="album photo" />
+            <p>{song.title}</p>
             <p>{song.artist}</p>
             <p>{song.album}</p>
-            <p>{song.album_photo_url}</p>
+            {/* <p>{song.album_photo_url}</p> */}
         </li>
+        </div>
     )
 };
 

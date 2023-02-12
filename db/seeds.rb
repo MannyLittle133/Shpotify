@@ -14,11 +14,11 @@ ApplicationRecord.transaction do
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!("songs")
-  Song.create!(title: "Purple Rain", album: "Purple Rain", artist: "Prince", album_photo_url: "https://example.com/purple-rain.jpg", created_at: Time.now, updated_at: Time.now)
-  Song.create!(title: "Billie Jean", album: "Thriller", artist: "Michael Jackson", album_photo_url: "https://example.com/thriller.jpg", created_at: Time.now, updated_at: Time.now)
-  Song.create!(title: "Bohemian Rhapsody", album: "A Night at the Opera", artist: "Queen", album_photo_url: "https://example.com/night-at-the-opera.jpg", created_at: Time.now, updated_at: Time.now)
-  Song.create!(title: "Imagine", album: "Imagine", artist: "John Lennon", album_photo_url: "https://example.com/imagine.jpg", created_at: Time.now, updated_at: Time.now)
-  Song.create!(title: "Smells Like Teen Spirit", album: "Nevermind", artist: "Nirvana", album_photo_url: "https://example.com/nevermind.jpg", created_at: Time.now, updated_at: Time.now)
+  Song.create!(title: "Purple Rain", album: "Purple Rain", artist: "Prince", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/9/9c/Princepurplerain.jpg", created_at: Time.now, updated_at: Time.now)
+  Song.create!(title: "Billie Jean", album: "Thriller", artist: "Michael Jackson", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png", created_at: Time.now, updated_at: Time.now)
+  Song.create!(title: "Bohemian Rhapsody", album: "A Night at the Opera", artist: "Queen", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png", created_at: Time.now, updated_at: Time.now)
+  Song.create!(title: "Drip Too hard", album: "Drip Harder", artist: "Lil Baby", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Drip_Too_Hard.jpg/220px-Drip_Too_Hard.jpg", created_at: Time.now, updated_at: Time.now)
+  Song.create!(title: "Never Gonna Give You Up", album: "Whenever You Need Somebody", artist: "Rick Astley", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/thumb/3/34/RickAstleyNeverGonnaGiveYouUp7InchSingleCover.jpg/220px-RickAstleyNeverGonnaGiveYouUp7InchSingleCover.jpg", created_at: Time.now, updated_at: Time.now)
 
   #     ApplicationRecord.transaction do
   #   puts "Destroying tables..."

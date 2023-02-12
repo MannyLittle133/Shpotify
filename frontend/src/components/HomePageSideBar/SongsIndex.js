@@ -16,7 +16,7 @@ const SongsIndex = () => {
 
     debugger
     return (
-        <ul style={{ backgroundColor: "red"}}>
+        <ul>
             {
                 songs.map((song, i) => {
                     return <SongsIndexItem

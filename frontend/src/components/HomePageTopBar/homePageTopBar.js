@@ -5,11 +5,28 @@ import { NavLink } from "react-router-dom";
 
 const HomePageTopBar = () => {
 
+    // const dispatch = useDispatch();
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     dispatch(logout());
+
+    //     return dispatch(sessionActions.logout());
+
+
+        
+    // }
+
     return (
         <div className="topBar">
+
+            <div>
+                {/* log out button here */}
+
+            </div>
             <div className="topBar__left">
                 <NavLink to="/home" exact={true} activeClassName="active">
-                    <img className="topBar__logo" src="https://i.imgur.com/1Q1Z1ZQ.png" alt="logo" />
+                    {/* <img className="topBar__logo" src="https://i.imgur.com/1Q1Z1ZQ.png" alt="logo" /> */}
                 </NavLink>
             </div>
             {/* <div className="topBar__center"> */}
