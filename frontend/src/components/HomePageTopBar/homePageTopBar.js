@@ -25,7 +25,7 @@ const HomePageTopBar = () => {
     return (
         <div className="topBar">
             <div className='demoUserButtonDiv'>
-        {/* <button onClick={handleSubmit} className="logOutButton" type="logout">Log Out</button> */}
+        <button onClick={handleSubmit} className="logOutButton" type="logout">Log Out</button>
             </div>
 
             <div>

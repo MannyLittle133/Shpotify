@@ -1,0 +1,59 @@
+.playBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(rgba(15, 15, 15, 0.798), rgb(0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    left: 0;
+}
+
+.playBarLeft {
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.albumArt {
+    height: 60px;
+    width: 60px;
+}
+
+.playBarCenter {
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.playBarCenterLeft {
+    color: white;   
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.playBarCenterRight {
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.playBarRight {
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+}

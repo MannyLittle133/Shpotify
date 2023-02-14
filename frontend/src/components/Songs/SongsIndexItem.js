@@ -6,7 +6,7 @@ const SongsIndexItem = ({ song }) => {
         
             <div className="songList">
                     
-                <img className="albumArt" src={song.albumPhotoUrl} alt="album photo" />
+                <img className="albumArtMain" src={song.albumPhotoUrl} alt="album photo" />
 
                 <div>
                     <p className="songTitle"> {song.title}</p>

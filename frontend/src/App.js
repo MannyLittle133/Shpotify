@@ -6,18 +6,17 @@ import Navigation from "./components/Navigation";
 import HomePageSideBar from "./components/HomePageSideBar/SideBarIndex";
 import HomePage from "./components/HomePageSideBar/SideBarIndex";
 import TopBar from "./components/HomePageTopBar/homePageTopBar";
-import PlayBar from "./components/Player";
+import PlayBar from "./components/PlayBar/PlayBar";
 import SongsIndexItem from "./components/Songs/SongsIndexItem";
 import SongsIndex from "./components/Songs/SongsIndex";
 import SideBarIndex from "./components/HomePageSideBar/SideBarIndex";
 import Body from "./components/HomePageBody/HomePageBody";
 
 
-
 function App() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
         <Switch>
           <Route path="/login">
             <LoginFormPage />
@@ -27,11 +26,11 @@ function App() {
           </Route>
           <Route path="/">
               {/* <HomePageSideBar /> */}
+              <PlayBar/>
               <Body/>
               <TopBar/>
               <SideBarIndex/>
-              <Navigation/>
-              {/* <PlayBar/> */}
+              {/* <Navigation/> */}
               {/* <SongsIndex/> */}
           </Route>
         </Switch>
