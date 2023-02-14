@@ -1,24 +1,11 @@
-.homePageSideBar {
-    /* width: 17%;
-    height: 100%;
+.homePageSideBarBody {
     background-color: black;
-    position: fixed;
-    top: 0;
+    height: 100vh;
     left: 0;
-    z-index: 1;
-    overflow-x: hidden;
-    padding-top: 20px; */
-    /* position: absolute; */
-    z-index: 1;
-    background-color: black;
-    width: 260px;
-    height: 101vh;
-    margin-top: -9px;
-    /* padding-top: 65px; */
-    /* overflow: visible; */
-
     position: fixed;
-    left: 0;
+    width: 250px;
+    z-index: 1;
+    top: 0; 
 }
 
 .homePageSideBar__nav {

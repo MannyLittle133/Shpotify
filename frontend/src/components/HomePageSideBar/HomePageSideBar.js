@@ -8,15 +8,12 @@ import whiteLogo from '../logos/shpotify_logo_login_cropped.jpg';
 function HomePageSideBar() {
 
     return (
-        <div className="homePageSideBar">
-
+        <div className="homePageSideBarBody">
+    
             <div className="sideBarLogo">
                 <img className="officialSideLogo" src={invertedLogo} alt="sideLogo" />
             </div>
 
-            <div className="homePageSideBar__logo">
-                {/* <img className='invLogo' src={invertedLogo} alt="Shpotify logo" /> */}
-            </div>
             <div className="homePageSideBar__nav">
                 
                     <div className='sideHome'>
@@ -28,27 +25,27 @@ function HomePageSideBar() {
                     <div>
                         <NavLink to="/search" activeClassName="active">
                             <i className="search"></i>
-                            <span>Search</span>
+                            {/* <span>Search</span> */}
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to="/collection/playlists" activeClassName="active">
                             <i className="music-note"></i>
-                            <span>Your Library</span>
+                            {/* <span>Your Library</span> */}
                         </NavLink>
                     </div>
 
                     <div>
                         <NavLink to="/collection/playlists" activeClassName="active">
                             <i className="playlist"></i>
-                            <span>Playlists</span>
+                            {/* <span>Playlists</span> */}
                         </NavLink>
                     </div>
                 
                     <div>
                         <NavLink to="/collection/playlists" activeClassName="active">
                             <i className="playlist"></i>
-                            <span>Create Playlist</span>
+                            {/* <span>Create Playlist</span> */}
                         </NavLink>
                     </div>
             </div>

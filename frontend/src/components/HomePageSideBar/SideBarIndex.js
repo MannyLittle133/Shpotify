@@ -1,22 +1,25 @@
 import React from "react";
+import Body from "../HomePageBody/HomePageBody";
 import HomePageSideBar from "./HomePageSideBar";
 import "./HomePageSideBar.css";
-import SongsIndex from "./SongsIndex";
-import "./SongsIndexItem.css"
 
-function HomePage() {
+
+
+
+function SideBarIndex() {
     return (
         <>
-            <div className="homePage">
-
+            <div className="sideBarIndex">
+                {/* <h1>Sidebar</h1> */}
                 <HomePageSideBar />
-                <div style={{ marginLeft: "250px", paddingTop: "10px" }}>
+                {/* <div className="songsIndex">
                     <h1 className="header">SONGS</h1>
                     <SongsIndex />
-                </div>
+                </div> */}
+                
             </div>
         </>
     );
 }
 
-export default HomePage
+export default SideBarIndex

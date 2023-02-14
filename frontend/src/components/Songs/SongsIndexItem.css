@@ -1,0 +1,106 @@
+/* .homePage { */
+    /* background-color: #a7a7a7; */
+/* } */
+
+/* .songsIndex { */
+    /* margin-Left: 250px; */
+    /* padding-Top: 10px; */
+/* } */
+
+.songList {
+    /* background-color: gray; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: 100%; */
+    /* height: 50px; */
+    /* padding: 0 10px; */
+    /* border-bottom: 1px solid #ebebeb; */
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.songUl {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    transition: background-color .5s;
+
+}
+
+.songList1 {
+    /* background-color: gray; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: 100%; */
+    /* height: 50px; */
+    /* padding: 0 10px; */
+    /* border-bottom: 1px solid #ebebeb; */
+    cursor: pointer;
+}
+
+.songList1:hover {
+    background-color: #292929;
+    transition: background-color .5s;
+}
+
+.albumArt {
+    /* display: inline-block; */
+    width: 150px;
+    height: 150px;
+    /* border-radius: 5px; */
+    border-radius: 7px;
+    box-shadow: 0px 2px 20px black;
+}
+
+.songTitle {
+    /* font-size: 1.2rem; */
+    /* font-weight: 500; */
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+
+    white-space: nowrap;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songArtist {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+.infoSongTitle {
+    font-size: 14px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.infoSongArtist {
+    color: white;
+    font-size: 12px;
+}
+
+.songsHeader {
+    font-family: circularsp-regular, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}

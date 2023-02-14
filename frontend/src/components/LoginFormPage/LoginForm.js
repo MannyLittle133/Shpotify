@@ -39,8 +39,8 @@ const LoginForm = () => {
   
 
   const handleDemoUserLoginForm = (e) => {
-    setCredential('musicLover@gmail.com');
-    setPassword('123456');
+    setCredential('demo@user.io');
+    setPassword('password');
   }
 
   return (
