@@ -9,10 +9,13 @@
 #  album_photo_url :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  song_url        :string
+#  album_id        :integer
 #
 class Song < ApplicationRecord
-    validates :title, :album, :artist, :album_photo_url, presence: true
+    validates :title, :album, :artist, :album_photo_url, :song_url,  presence: true
 
+    
 
     has_many :playlist_songs,
         foreign_key: :song_id,
@@ -23,7 +26,15 @@ class Song < ApplicationRecord
         through: :playlist_songs,
         source: :playlist
 
-    has_one_attached :song_file
+    belongs_to :album,  
+        foreign_key: :album_id,
+        class_name: :Album
+
+    has_one :artist,
+        through: :album,
+        source: :artist
+
+
 
 
     def self.search(search)

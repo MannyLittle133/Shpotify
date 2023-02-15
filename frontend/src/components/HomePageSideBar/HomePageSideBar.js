@@ -7,6 +7,23 @@ import whiteLogo from '../logos/shpotify_logo_login_cropped.jpg';
 
 function HomePageSideBar() {
 
+    const sessionUser = useSelector(state => state.session.user);
+
+    let sessionLinks;
+    if (sessionUser) {
+        sessionLinks = (
+            <div className='sideBarPlaylists'>
+                <NavLink id='sideBarPlaylistsButton' exact to="/playlists/create"><i class="fa-regular fa-square-plus"></i><span style={{marginLeft: '15px'}}>Create Playlist</span></NavLink>
+            </div>
+        );
+    } else {
+        sessionLinks = (
+            <div className='sideBarPlaylists'>
+                <NavLink id='sideBarPlaylistsButton' exact to="/login"><i class="fa-regular fa-square-plus"></i><span style={{marginLeft: '15px'}}>Create Playlist</span></NavLink>
+            </div>
+        )
+    }
+
     return (
         <div className="homePageSideBarBody">
     
@@ -17,28 +34,28 @@ function HomePageSideBar() {
             <div className="homePageSideBar__nav">
                 
                     <div className='sideHome'>
-                        <NavLink to="/home" activeClassName="active">
+                        <NavLink to="/" activeClassName="active">
                             <i className="home"></i>
-                            <span>Home</span>
+                            <i className="fa-solid fa-house"></i><span style={{marginLeft: '15px'}}>Home</span>
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to="/search" activeClassName="active">
                             <i className="search"></i>
-                            {/* <span>Search</span> */}
+                            <i className= "fa-solid fa-magnifying-glass"></i><span style={{marginLeft: '15px'}}>Search</span>
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to="/collection/playlists" activeClassName="active">
                             <i className="music-note"></i>
-                            {/* <span>Your Library</span> */}
+                            <i class="fa-regular fa-bookmark"></i><span style={{marginLeft: '15px'}}>Your Library</span>
                         </NavLink>
                     </div>
 
                     <div>
-                        <NavLink to="/collection/playlists" activeClassName="active">
+                        <NavLink to="/playlists" activeClassName="active">
                             <i className="playlist"></i>
-                            {/* <span>Playlists</span> */}
+                            <i class="fa-regular fa-square-plus"></i><span style={{marginLeft: '15px'}}>Create Playlist</span>
                         </NavLink>
                     </div>
                 

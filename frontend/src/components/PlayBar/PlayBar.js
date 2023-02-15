@@ -7,7 +7,7 @@ function PlayBar() {
             <div className="playBarLeft">
                 <img className="albumArt" src="https://images.genius.com/f429f9daba03f2e7756d237603e97b93.700x700x1.jpg" alt="album photo" />
                 <div className="songInfo">
-                    <h4>Aye</h4>
+                    <h4>PTSD</h4>
                     <p>G Herbo</p>
                 </div>
             </div>
