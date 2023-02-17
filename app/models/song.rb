@@ -4,8 +4,7 @@
 #
 #  id              :bigint           not null, primary key
 #  title           :string           not null
-#  album           :string           not null
-#  artist          :string           not null
+#  artist_name     :string           not null
 #  album_photo_url :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
@@ -13,22 +12,20 @@
 #  album_id        :integer
 #
 class Song < ApplicationRecord
-    validates :title, :album, :artist, :album_photo_url, :song_url,  presence: true
+    validates :title, :artist_name, :album_photo_url, :song_url,  presence: true
 
     
-
-    has_many :playlist_songs,
-        foreign_key: :song_id,
-        class_name: :PlaylistSong
-
-
+    belongs_to :album,  
+        foreign_key: :album_id,
+        class_name: :Album
+        
     has_many :playlists,
         through: :playlist_songs,
         source: :playlist
 
-    belongs_to :album,  
-        foreign_key: :album_id,
-        class_name: :Album
+    has_many :playlist_songs,
+        foreign_key: :song_id,
+        class_name: :PlaylistSong
 
     has_one :artist,
         through: :album,

@@ -27,9 +27,9 @@ function App() {
           <Route path="/">
               {/* <HomePageSideBar /> */}
               <PlayBar/>
-              <Body/>
               <TopBar/>
               <SideBarIndex/>
+              <Body/>
               {/* <Navigation/> */}
               {/* <SongsIndex/> */}
           </Route>
