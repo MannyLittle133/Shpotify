@@ -1,7 +1,7 @@
 .body {
     background-color: rgb(33, 31, 31);
     background-image: linear-gradient(rgba(108, 106, 106, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    height: 100vh;
+    height: 120vh;
     left: 1;
     width: 100%;
     z-index: 1;

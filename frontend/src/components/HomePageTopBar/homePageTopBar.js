@@ -15,7 +15,7 @@ const HomePageTopBar = () => {
     const sessionUser = useSelector(state => state.session.user);
 
 
-    const handleSubmit = (e) => {
+    const signOut = (e) => {
         e.preventDefault();
         dispatch(logout());
 
@@ -25,7 +25,7 @@ const HomePageTopBar = () => {
     return (
         <div className="topBar">
             <div className='demoUserButtonDiv'>
-        <button onClick={handleSubmit} className="logOutButton" type="logout">Log Out</button>
+        <button onClick={signOut} className="logOutButton" type="logout">Log Out</button>
             </div>
 
             <div>
