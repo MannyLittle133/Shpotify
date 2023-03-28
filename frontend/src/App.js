@@ -11,6 +11,7 @@ import SongsIndexItem from "./components/Songs/SongsIndexItem";
 import SongsIndex from "./components/Songs/SongsIndex";
 import SideBarIndex from "./components/HomePageSideBar/SideBarIndex";
 import Body from "./components/HomePageBody/HomePageBody";
+import AlbumShowPage from "./components/AlbumShow/albumShow";
 
 
 function App() {
@@ -24,15 +25,28 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/">
-              {/* <HomePageSideBar /> */}
+          {/* <Route path="/songs/:songId">
+              <SongsIndexItem/>
               <PlayBar/>
+              <TopBar/>
+              <SideBarIndex/>
+          </Route> */}
+          <Route path="/albums/:albumId">
+              <AlbumShowPage/>
+              <PlayBar/>
+              <TopBar/>
+              <SideBarIndex/>
+          </Route>
+          <Route path="/albums">
+              {/* <HomePageSideBar /> */}
+              {/* <PlayBar/> */}
               <TopBar/>
               <SideBarIndex/>
               <Body/>
               {/* <Navigation/> */}
               {/* <SongsIndex/> */}
           </Route>
+          
         </Switch>
     </>
   );

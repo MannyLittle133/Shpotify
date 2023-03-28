@@ -14,7 +14,7 @@ const AlbumsIndex = () => {
     
     const albums = useSelector(getAlbums);
     
-    debugger
+    // debugger
     return (
         <div>
             <h1 className="albumsHeader">Albums</h1>

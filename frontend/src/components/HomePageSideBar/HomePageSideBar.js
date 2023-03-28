@@ -39,12 +39,12 @@ function HomePageSideBar() {
                             <i className="fa-solid fa-house"></i><span style={{marginLeft: '15px'}}>Home</span>
                         </NavLink>
                     </div>
-                    <div>
+                    {/* <div>
                         <NavLink to="/search" activeClassName="active">
                             <i className="search"></i>
                             <i className= "fa-solid fa-magnifying-glass"></i><span style={{marginLeft: '15px'}}>Search</span>
                         </NavLink>
-                    </div>
+                    </div> */}
                     <div>
                         <NavLink to="/collection/playlists" activeClassName="active">
                             <i className="music-note"></i>

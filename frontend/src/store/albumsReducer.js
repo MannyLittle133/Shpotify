@@ -2,6 +2,7 @@ import csrfFetch from "./csrf";
 
 export const RECEIVE_ALBUM = "albums/RECEIVE_ALBUM";
 export const RECEIVE_ALBUMS = "albums/RECEIVE_ALBUMS";
+export const RECEIVE_ALBUM_SONGS = "albums/RECEIVE_ALBUM_SONGS";
 
 export const receiveAlbum = (album) => ({
     type: RECEIVE_ALBUM,
@@ -48,6 +49,19 @@ export const fetchAlbums = () => async (dispatch) => {
     }
 }
 
+// get songs from the album selected
+
+export const fetchAlbumSongs = (albumId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/albums/${albumId}/songs`);
+
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(receiveAlbum(data));
+    }
+}
+
+
+
 
 const albumsReducer = (state = {}, action) => {
     const newState = { ...state };
@@ -58,6 +72,9 @@ const albumsReducer = (state = {}, action) => {
             return newState;
         case RECEIVE_ALBUMS:
             return { ...newState, ...action.albums }
+        case RECEIVE_ALBUM_SONGS:
+            newState[action.album.id] = action.album;
+            return newState;
         default:
             return state;
     }

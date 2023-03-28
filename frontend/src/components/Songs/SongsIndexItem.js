@@ -14,7 +14,7 @@ const SongsIndexItem = ({ song }) => {
                     <div>
                         <p className="songTitle"> {song.title}</p>
                         <p className="songArtist">{song.artist}</p>
-                        {/* <p className="audio">{song.songUrl}</p> */}
+                        <p className="audio">{song.songUrl}</p>
                         {/* <p className="songAlbum">{song.album}</p> */}
                         {/* <p>{song.album_photo_url}</p> */}
                     </div>

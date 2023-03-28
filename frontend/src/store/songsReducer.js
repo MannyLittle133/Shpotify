@@ -11,9 +11,9 @@ export const receiveSongs = (songs) => ({
 
 export const getSongs = (state) => {
 
-    debugger
+    // debugger
     if (state && state.songs) {
-        debugger
+        // debugger
         return Object.values(state.songs);
     }
 

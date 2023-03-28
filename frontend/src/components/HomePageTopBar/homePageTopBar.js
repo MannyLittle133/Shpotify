@@ -14,18 +14,26 @@ const HomePageTopBar = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
 
+    
+    // const signOut = (e) => {
+    //     e.preventDefault();
+    //     dispatch(logout());
+
+    //     return dispatch(sessionActions.logout());
+    // }
+
+    // redirects to login page after logout
 
     const signOut = (e) => {
         e.preventDefault();
         dispatch(logout());
-
-        return dispatch(sessionActions.logout());
+        history.push('/login');
     }
 
     return (
         <div className="topBar">
             <div className='demoUserButtonDiv'>
-        <button onClick={signOut} className="logOutButton" type="logout">Log Out</button>
+                <button onClick={signOut} className="logOutButton" type="logout">Log Out</button>
             </div>
 
             <div>
@@ -49,6 +57,8 @@ const HomePageTopBar = () => {
                     {/* <i className="fas fa-cog"></i> */}
                 </div>
             </div> 
+
+
         </div>
     );
 }
