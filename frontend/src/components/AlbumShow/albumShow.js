@@ -7,7 +7,7 @@ import csrfFetch from "../../store/csrf";
 import "./albumShow.css";
 import SongsIndex from "../Songs/SongsIndex";
 import SongsIndexItem from "../Songs/SongsIndexItem";
-import { fetchSongs } from "../../store/songsReducer";
+import { fetchSongs, getSongs } from "../../store/songsReducer";
 
 function AlbumShowPage() {
   const dispatch = useDispatch();
@@ -15,71 +15,48 @@ function AlbumShowPage() {
   const album = useSelector((state) =>
     state.albums[albumId] ? state.albums[albumId] : {}
   );
+  const songs = useSelector((state) =>
+    state.songs[albumId] ? state.songs[albumId] : {}
+);
   const [artistName, setArtistName] = useState("");
   const { artistId, title, albumPhotoUrl, songId } = album;
   const [songsArr, setSongsArr] = useState([]);
   const [songTitlesArr, setSongTitlesArr] = useState([]);
   const [shouldRedirect, setShouldRedirect] = useState(false);
+  const [albumSongs, setAlbumSongs] = useState([]);
 
-  // use effect that fetches songs for the album
 
-    // useEffect(() => {
-    //     dispatch(fetchSongs(songId)).then((res) => {
-    //         let data = res.payload.songs;
-            
-    //         if (data) {
-    //             for (const [key, value] of Object.entries(data)) {
-    //                 if (!songTitlesArr.includes(value.title)) {
-    //                     setSongsArr((songsArr) => [...songsArr, value]);
-    //                     setSongTitlesArr((songTitlesArr) => [
-    //                         ...songTitlesArr,
-    //                         value.title,
-    //                     ]);
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }, [albumId, dispatch]);
-
-    useEffect(() => {
-        if (albumId === songId) {
-          dispatch(fetchSongs(albumId)).then((res) => {
-            let data = res.payload.songs;
-      
-            if (data) {
-              setSongsArr(data);
-              setSongTitlesArr(data.map(song => song.title));
-            }
-          });
+  useEffect(() => {
+    dispatch(fetchSongs()).then((res) => {
+      let data = res.payload.songs;
+      setAlbumSongs(data);
+    });
+  }, [dispatch]);
+  
+  useEffect(() => {
+    if (albumId === songId) {
+      dispatch(fetchSongs(albumId)).then((res) => {
+        let data = res.payload.songs;
+  
+        if (data) {
+          let albumSongsFiltered = albumSongs.filter(
+            (song) => song.albumId === albumId
+          );
+          setSongsArr(albumSongsFiltered);
+          setSongTitlesArr(albumSongsFiltered.map((song) => song.title));
         }
-      }, [albumId, songId, dispatch]);
+      });
+    }
+  }, [albumId, songId, dispatch, albumSongs]);
+  
 
-//   useEffect(() => {
-//     dispatch(fetchAlbum(albumId)).then((res) => {
-//       let data = res.payload.album;
 
-//       if (data.artist.name) {
-//         setArtistName(data.artist.name);
-//       }
 
-//       if (data.songs) {
-//         for (const [key, value] of Object.entries(data.songs)) {
-//           if (!songTitlesArr.includes(value.title)) {
-//             setSongsArr((songsArr) => [...songsArr, value]);
-//             setSongTitlesArr((songTitlesArr) => [
-//               ...songTitlesArr,
-//               value.title,
-//             ]);
-//           }
-//         }
-//       }
-//     });
-//   }, [albumId, dispatch]);
 
   
 
   if (shouldRedirect) {
-    return <Redirect to={`/albums/${albumId}`} />;
+    return <Redirect to={`/${albumId}`} />;
   }
 
   return (
@@ -105,21 +82,18 @@ function AlbumShowPage() {
         <div className="hashtag-and-title">
           <p className="title-text">{album.title}</p>
         </div>
-
-        {songsArr.map((song, idx) => (
-          <SongsIndex
-            key={idx}
-            id={idx}
-            songTitle={song.title}
-            artistName={song.artist}
-            songUrl={song.songUrl}
-            albumId={albumId}
-          />
-        ))}
+        <div>
+        <div key={songs.id}>
+        <h3 src={songs.songUrl}> {songs.title}</h3>
+        {/* <p>{song.artist}</p> */}
+        {/* <p>{song.duration}</p> */}
+      </div>
+  </div>
+        
       </div>
     </div>
   );
 }
-// import SongsIndex from "../Songs/SongsIndex";
+
 
 export default AlbumShowPage;

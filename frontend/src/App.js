@@ -31,13 +31,13 @@ function App() {
               <TopBar/>
               <SideBarIndex/>
           </Route> */}
-          <Route path="/albums/:albumId">
+          <Route path="/:albumId">
               <AlbumShowPage/>
               <PlayBar/>
               <TopBar/>
               <SideBarIndex/>
           </Route>
-          <Route path="/albums">
+          <Route path="/">
               {/* <HomePageSideBar /> */}
               {/* <PlayBar/> */}
               <TopBar/>
