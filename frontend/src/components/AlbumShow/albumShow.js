@@ -8,6 +8,7 @@ import "./albumShow.css";
 import SongsIndex from "../Songs/SongsIndex";
 import SongsIndexItem from "../Songs/SongsIndexItem";
 import { fetchSongs, getSongs } from "../../store/songsReducer";
+import { fetchArtists, getArtist } from "../../store/artistsReducer";
 
 function AlbumShowPage() {
   const dispatch = useDispatch();
@@ -17,6 +18,9 @@ function AlbumShowPage() {
   );
   const songs = useSelector((state) =>
     state.songs[albumId] ? state.songs[albumId] : {}
+);
+    const artist = useSelector((state) =>
+    state.artists[albumId] ? state.artists[albumId] : {}
 );
   const [artistName, setArtistName] = useState("");
   const { artistId, title, albumPhotoUrl, songId } = album;
@@ -84,8 +88,9 @@ function AlbumShowPage() {
         </div>
         <div>
         <div key={songs.id}>
-        <h3 src={songs.songUrl}> {songs.title}</h3>
-        {/* <p>{song.artist}</p> */}
+            <h3 src={songs.songUrl}> {songs.title}</h3>
+            
+        <p>{songs.artist.name}</p>
         {/* <p>{song.duration}</p> */}
       </div>
   </div>
