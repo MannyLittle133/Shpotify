@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAlbum } from "../../store/albumsReducer";
@@ -10,25 +10,36 @@ import SongsIndexItem from "../Songs/SongsIndexItem";
 import { fetchSongs, getSongs } from "../../store/songsReducer";
 import { fetchArtists, getArtist } from "../../store/artistsReducer";
 
+
 function AlbumShowPage() {
   const dispatch = useDispatch();
   const { albumId } = useParams();
+  const { artistId } = useParams();
+  const audioRef = useRef(null);
+
   const album = useSelector((state) =>
     state.albums[albumId] ? state.albums[albumId] : {}
   );
   const songs = useSelector((state) =>
     state.songs[albumId] ? state.songs[albumId] : {}
-);
-    const artist = useSelector((state) =>
-    state.artists[albumId] ? state.artists[albumId] : {}
-);
+  );
+    const artists = useSelector((state) =>
+        state.artists[artistId] ? state.artists[artistId] : {}
+    );
   const [artistName, setArtistName] = useState("");
-  const { artistId, title, albumPhotoUrl, songId } = album;
+  const { title, albumPhotoUrl, songId } = album;
+//   const { albumID, artist, name, songUrl } = songs;
   const [songsArr, setSongsArr] = useState([]);
   const [songTitlesArr, setSongTitlesArr] = useState([]);
   const [shouldRedirect, setShouldRedirect] = useState(false);
   const [albumSongs, setAlbumSongs] = useState([]);
 
+    useEffect(() => {
+        dispatch(fetchArtists()).then((res) => {
+            let data = res.payload.artists;
+            setArtistName(data);
+        });
+    }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchSongs()).then((res) => {
@@ -54,16 +65,33 @@ function AlbumShowPage() {
   }, [albumId, songId, dispatch, albumSongs]);
   
 
+//   function handleSongClick() {
+//     const audioPlayer = document.getElementById("audio-player");
+//     audioPlayer.src = songs.songUrl;
+//     audioPlayer.play();
+//   }
 
+    function handleSongClick() {
+        // audioRef.current.play();
 
-
+        if (audioRef.current.paused) {
+            audioRef.current.play();
+        } else {    
+            audioRef.current.pause();
+        }
+    }
+  
   
 
-  if (shouldRedirect) {
-    return <Redirect to={`/${albumId}`} />;
-  }
+    // if (shouldRedirect) {
+    //     return <Redirect to={`/${albumId}`} />;
+    // }
 
-  return (
+    if (!songs || !album) {
+        return null;
+    }
+
+    return (
     <div className="album-show-page">
       <div className="album-details">
         <img className="album-photo" src={album.albumPhotoUrl} alt="AlbumCover" />
@@ -73,7 +101,7 @@ function AlbumShowPage() {
           <div className="name-and-year">
             {/* <Link to={`/artists/${artistId}`} className="artist-name"> */}
                 
-            <p className="artist-name">{album.artist.name}</p>
+            {/* <p className="artist-name">{album.artist.name}</p> */}
             {/* </Link> */}
             
             {/* <p className="bullet-point">•</p> */}
@@ -82,22 +110,26 @@ function AlbumShowPage() {
         </div>
       </div>
 
-      <div className="album-songs">
-        <div className="hashtag-and-title">
-          <p className="title-text">{album.title}</p>
+        <div className="album-songs">
+            <div className="hashtag-and-title">
+                <p className="title-text">{album.title}</p>
+            </div>
+
+            <div className="album-show-tracks">
+                <div key={songs.id} onClick={handleSongClick}>
+                    {/* <audio id= 'audio-player' src={songs.songUrl}> {songs.title}</audio> */}
+                    <audio id="audio-player" ref={audioRef} src={songs.songUrl}>{songs.title}</audio>
+
+                    <h3>{songs.title}</h3>
+                    {/* <p>{songs.artist.name}</p> */}
+                {/* <p>{artists}</p> */}
+                {/* <p>{song.duration}</p> */}
+                </div>
+            </div>
         </div>
-        <div>
-        <div key={songs.id}>
-            <h3 src={songs.songUrl}> {songs.title}</h3>
-            
-        <p>{songs.artist.name}</p>
-        {/* <p>{song.duration}</p> */}
-      </div>
-  </div>
         
-      </div>
     </div>
-  );
+    );
 }
 
 

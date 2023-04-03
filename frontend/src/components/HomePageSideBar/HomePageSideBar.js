@@ -46,14 +46,14 @@ function HomePageSideBar() {
                         </NavLink>
                     </div> */}
                     <div>
-                        <NavLink to="/collection/playlists" activeClassName="active">
+                        <NavLink to="/playlists" activeClassName="active">
                             <i className="music-note"></i>
                             <i class="fa-regular fa-bookmark"></i><span style={{marginLeft: '15px'}}>Your Library</span>
                         </NavLink>
                     </div>
 
                     <div>
-                        <NavLink to="/playlists" activeClassName="active">
+                        <NavLink to="/playlists/create" activeClassName="active">
                             <i className="playlist"></i>
                             <i class="fa-regular fa-square-plus"></i><span style={{marginLeft: '15px'}}>Create Playlist</span>
                         </NavLink>

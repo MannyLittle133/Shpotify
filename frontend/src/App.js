@@ -39,7 +39,7 @@ function App() {
           </Route>
           <Route path="/">
               {/* <HomePageSideBar /> */}
-              {/* <PlayBar/> */}
+              <PlayBar/>
               <TopBar/>
               <SideBarIndex/>
               <Body/>

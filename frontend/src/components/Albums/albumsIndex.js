@@ -17,7 +17,7 @@ const AlbumsIndex = () => {
     // debugger
     return (
         <div>
-            <h1 className="albumsHeader">Albums</h1>
+            <h1 className="albumsHeader">Library</h1>
             <ul className="albumUl">
                 {
                     albums.map((album, i) => {
