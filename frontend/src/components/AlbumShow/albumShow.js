@@ -112,7 +112,8 @@ function AlbumShowPage() {
 
         <div className="album-songs">
             <div className="hashtag-and-title">
-                <p className="title-text">{album.title}</p>
+                {/* <p className="title-text">{album.title}</p> */}
+                <p className="title-text"># Title Album</p>
             </div>
 
             <div className="album-show-tracks">

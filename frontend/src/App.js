@@ -31,6 +31,12 @@ function App() {
               <TopBar/>
               <SideBarIndex/>
           </Route> */}
+          <Route path="/playlists">
+              <PlayBar/>
+              <TopBar/>
+              <SideBarIndex/>
+              {/* <Body/> */}
+          </Route>
           <Route path="/:albumId">
               <AlbumShowPage/>
               <PlayBar/>

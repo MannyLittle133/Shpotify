@@ -101,7 +101,8 @@
 }
 
 .hashtag-and-title {
-    display: flex;
+    display: grid;
+    /* grid-template-columns: repeat(4, 200px); */
     flex-direction: row;
 
     color: #a7a7a7;
@@ -111,7 +112,16 @@
     /* border-bottom: .1px solid #a7a7a7; */
     border-bottom: .1px solid rgba(167,167,167,0.3);
     padding-bottom: 10px;
+    /* grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr); */
+    /* grid-gap: 16px;
+    display: grid;
+    padding: 0 16px; */
+    /* border: 1px solid transparent; */
+    /* border-radius: 4px;
+    height: 56px;
+    position: relative;  */
 }
+
 
 
 .title-text {
