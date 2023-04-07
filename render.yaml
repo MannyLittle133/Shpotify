@@ -1,5 +1,5 @@
 databases:
-  - name: Shpotify
+  - name: Shpotify1
     user: shpotifyUser
     plan: free
     region: ohio
