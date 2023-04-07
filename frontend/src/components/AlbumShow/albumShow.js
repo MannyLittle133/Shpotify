@@ -80,7 +80,24 @@ function AlbumShowPage() {
             audioRef.current.pause();
         }
     }
-  
+    
+    // pause and play using the spacebar
+
+    useEffect(() => {
+        const handleSpacebar = (e) => {
+            if (e.code === "Space" && !audioRef.current.paused) {
+              audioRef.current.pause();
+            } else if (e.code === "Space" && audioRef.current.paused) {
+              audioRef.current.play();
+            }
+        };
+
+        document.addEventListener("keydown", handleSpacebar);
+
+        return () => document.removeEventListener("keydown", handleSpacebar);
+    }, []);
+
+
   
 
     // if (shouldRedirect) {
