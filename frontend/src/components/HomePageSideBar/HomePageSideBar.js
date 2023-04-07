@@ -26,11 +26,11 @@ function HomePageSideBar() {
 
     return (
         <div className="homePageSideBarBody">
-    
+        <NavLink to="/" activeClassName="active">
             <div className="sideBarLogo">
                 <img className="officialSideLogo" src={invertedLogo} alt="sideLogo" />
             </div>
-
+        </NavLink>
             <div className="homePageSideBar__nav">
                 
                     <div className='sideHome'>
