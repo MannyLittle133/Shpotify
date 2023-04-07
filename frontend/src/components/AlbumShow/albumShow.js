@@ -84,7 +84,7 @@ function AlbumShowPage() {
     // pause and play using the spacebar
 
     useEffect(() => {
-        const handleSpacebar = (e) => {
+        const handleSpaceBarClick = (e) => {
             if (e.code === "Space" && !audioRef.current.paused) {
               audioRef.current.pause();
             } else if (e.code === "Space" && audioRef.current.paused) {
@@ -92,9 +92,9 @@ function AlbumShowPage() {
             }
         };
 
-        document.addEventListener("keydown", handleSpacebar);
+        document.addEventListener("keydown", handleSpaceBarClick);
 
-        return () => document.removeEventListener("keydown", handleSpacebar);
+        return () => document.removeEventListener("keydown", handleSpaceBarClick);
     }, []);
 
 
@@ -119,7 +119,7 @@ function AlbumShowPage() {
             {/* <Link to={`/artists/${artistId}`} className="artist-name"> */}
                 
             {/* <p className="artist-name">{album.artist.name}</p> */}
-            <p className="artist-name">{songs.artist.name}</p>
+            {/* <p className="artist-name">{songs.artist.name}</p> */}
             {/* </Link> */}
             
             {/* <p className="bullet-point">•</p> */}
@@ -140,7 +140,7 @@ function AlbumShowPage() {
                     <audio id="audio-player" ref={audioRef} src={songs.songUrl}>{songs.title}</audio>
 
                     <h3>{songs.title}</h3>
-                    <p>{songs.artist.name}</p>
+                    {/* <p>{songs.artist.name}</p> */}
                 {/* <p>{artists}</p> */}
                 {/* <p>{song.duration}</p> */}
                 </div>

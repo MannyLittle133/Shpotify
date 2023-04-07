@@ -1,3 +1,4 @@
+gem "faker"
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -20,11 +21,10 @@ gem "rack-cors"
 
 gem "bcrypt"
 gem "jbuilder"
-gem "faker"
 
-group :development, :test do
-  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
-end
+# group :development, :test do
+#   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
+# end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
