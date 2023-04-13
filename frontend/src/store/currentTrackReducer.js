@@ -1,6 +1,7 @@
 import csrfFetch from "./csrf";
 
 export const RECEIVE_CURRENT_TRACK = "currentTrack/RECEIVE_CURRENT_TRACK";
+export const SET_CURRENT_TRACK = "currentTrack/SET_CURRENT_TRACK";
 
 export const receiveCurrentTrack = (currentTrack) => ({
     type: RECEIVE_CURRENT_TRACK,
@@ -12,6 +13,11 @@ export const getCurrentTrack = (state) => {
         return state.currentTrack;
     }
 }
+
+export const setCurrentTrack = (songId) => ({
+    type: SET_CURRENT_TRACK,
+    songId,
+})
 
 export const fetchCurrentTrack = (currentTrackId) => async (dispatch) => {
     const response = await csrfFetch(`/api/currentTracks/${currentTrackId}`);
@@ -26,7 +32,7 @@ const currentTrackReducer = (state = {}, action) => {
     const newState = { ...state };
 
     switch (action.type) {
-        case RECEIVE_CURRENT_TRACK:
+        case SET_CURRENT_TRACK:
             newState[action.currentTrack.id] = action.currentTrack;
             return newState;
         default:
