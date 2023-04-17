@@ -11,9 +11,9 @@ ApplicationRecord.transaction do
     # Unnecessary if using `rails db:seed:replant`
     Artist.destroy_all
     Album.destroy_all
-    Song.destroy_all
     Playlist.destroy_all
     PlaylistSong.destroy_all
+    Song.destroy_all
     User.destroy_all
     
     
