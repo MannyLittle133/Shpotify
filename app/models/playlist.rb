@@ -16,20 +16,21 @@ class Playlist < ApplicationRecord
         foreign_key: :creator_id,
         class_name: :User
         
-    has_many :songs,
-        through: :playlist_songs,
-        source: :song
-
-    has_many :playlist_songs,
+        
+        has_many :playlist_songs,
         primary_key: :id,
         foreign_key: :playlist_id,
         class_name: :PlaylistSong,
         dependent: :destroy
-
-    has_many :artists,
+        
+        has_many :artists,
         through: :albums,
         source: :artist
-
+        
+        has_many :songs,
+            through: :playlist_songs,
+            source: :song
+            
     has_many :albums,
         through: :songs,
         source: :album

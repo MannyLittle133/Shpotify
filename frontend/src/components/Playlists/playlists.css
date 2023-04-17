@@ -1,4 +1,4 @@
-.body {
+.playlists {
     background-color: rgb(33, 31, 31);
     background-image: linear-gradient(rgba(108, 106, 106, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     height: 120vh;
@@ -19,5 +19,14 @@
     z-index: 1;
     /* top: 0; */
     margin-left: px;
+    margin-top: 100px;
+}
+
+.playlistsHeader {
+    /* background-color: gray; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
     margin-top: 100px;
 }

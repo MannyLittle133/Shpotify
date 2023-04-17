@@ -12,6 +12,7 @@ import SongsIndex from "./components/Songs/SongsIndex";
 import SideBarIndex from "./components/HomePageSideBar/SideBarIndex";
 import Body from "./components/HomePageBody/HomePageBody";
 import AlbumShowPage from "./components/AlbumShow/albumShow";
+import Playlists from "./components/Playlists/playlistsIndex";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
               <PlayBar/>
               <TopBar/>
               <SideBarIndex/>
+              <Playlists/>  
               {/* <Body/> */}
           </Route>
           <Route path="/:albumId">

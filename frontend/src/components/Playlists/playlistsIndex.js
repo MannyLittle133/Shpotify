@@ -9,14 +9,15 @@ const Playlists = () => {
     const history = useHistory();
     const playlists = useSelector(getPlaylists);
 
+
     useEffect(() => {
         dispatch(fetchPlaylists());
     }, [dispatch]);
 
-    const handlePlaylistClick = (e) => {
-        e.preventDefault();
-        history.push(`/playlists/${e.target.id}`);
-    }
+    // const handlePlaylistClick = (e) => {
+    //     e.preventDefault();
+    //     history.push(`/playlists/${e.target.id}`);
+    // }
 
     return (
         <div className="playlists">
@@ -26,7 +27,7 @@ const Playlists = () => {
                     playlists.map((playlist, i) => {
                         return (
                             <div className="playlistList1">
-                                <li className="playlistList2" key={i} id={playlist.id} onClick={handlePlaylistClick}>
+                                <li className="playlistList2" key={i} id={playlist.id}>
                                     <img className="playlistImg" src={playlist.playlistPhotoUrl} alt={playlist.name} />
                                     <p className="playlistName">{playlist.name}</p>
                                 </li>
@@ -38,3 +39,5 @@ const Playlists = () => {
         </div>
     );
 }
+
+export default Playlists;
