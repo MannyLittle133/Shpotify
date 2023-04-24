@@ -8,11 +8,13 @@ const Playlists = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const playlists = useSelector(getPlaylists);
-
+    const playlistImg = "https://shpotify-seeds.s3.amazonaws.com/playlistPhoto.jpeg"
 
     useEffect(() => {
         dispatch(fetchPlaylists());
     }, [dispatch]);
+
+    
 
     // const handlePlaylistClick = (e) => {
     //     e.preventDefault();
@@ -27,9 +29,9 @@ const Playlists = () => {
                     playlists.map((playlist, i) => {
                         return (
                             <div className="playlistList1">
-                                <li className="playlistList2" key={i} id={playlist.id}>
-                                    <img className="playlistImg" src={playlist.playlistPhotoUrl} alt={playlist.name} />
-                                    <p className="playlistName">{playlist.name}</p>
+                                <li className="playlistList2" key={i} id={playlists.id}>
+                                    {/* <img className="playlistImg" src={playlistImg} alt={playlists.name} /> */}
+                                    <p className="playlistName">{playlists.name}</p>
                                 </li>
                             </div>
                         )

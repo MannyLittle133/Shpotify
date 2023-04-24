@@ -22,9 +22,11 @@ gem "rack-cors"
 gem "bcrypt"
 gem "jbuilder"
 
-group :development, :test do
-  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
-end
+# might need to comment out byebug for render to work
+
+# group :development, :test do
+#   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
+# end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
