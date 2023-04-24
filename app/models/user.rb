@@ -25,6 +25,17 @@ class User < ApplicationRecord
   validates :password, length: { in: 6..255 }, allow_nil: true
   
   before_validation :ensure_session_token
+
+  has_many :playlists,
+    primary_key: :id,
+    foreign_key: :creator_id,
+    class_name: :Playlist,
+    dependent: :destroy
+
+  has_many :playlist_songs,
+    through: :playlists,
+    source: :songs,
+    dependent: :destroy
   
 
   def self.find_by_credentials(credential, password)
