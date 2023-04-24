@@ -72,11 +72,11 @@ ApplicationRecord.transaction do
     Song.create!(title: "Back In Blood", artist_name: "Pooh Shiesty", album_photo_url: "https://i.scdn.co/image/ab67616d0000b2738da9c99abe05fe9229d1ffa9", song_url:"https://shpotify-seeds.s3.amazonaws.com/Y2Mate.is+-+Pooh+Shiesty+-+Back+In+Blood+(feat.+Lil+Durk)+%5BOfficial+Audio%5D-RnGLMCOFjFQ-160k-1656908644326.mp3", created_at: Time.now, updated_at: Time.now, album_id: 9)
     Song.create!(title: "Red Eye", artist_name: "YoungBoy Never Broke Again", album_photo_url: "https://upload.wikimedia.org/wikipedia/en/a/aa/YoungBoy_Never_Broke_Again_-_Still_Flexin%2C_Still_Steppin.png", song_url:"https://shpotify-seeds.s3.amazonaws.com/Y2Mate.is+-+YoungBoy+Never+Broke+Again+-+Red+Eye+%5BOfficial+Audio%5D-xeA7sqs0yi0-160k-1656495581625.mp3", created_at: Time.now, updated_at: Time.now, album_id: 10)
     # 
-# PLAYLISTS
+  # PLAYLISTS
 
     Playlist.create!(title: "My Playlist", creator_id: 1, created_at: Time.now, updated_at: Time.now)
 
-#   PLAYLISTSONGS
+  #   PLAYLISTSONGS
 
     PlaylistSong.create!(playlist_id: 1, song_id: 1)
     
