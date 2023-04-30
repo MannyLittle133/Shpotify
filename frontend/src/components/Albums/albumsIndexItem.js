@@ -12,6 +12,7 @@ const AlbumsIndexItem = ({ album }) => {
             <div>
                 <p className="albumTitle"> {album.title}</p>
                 <p className="albumArtist">{album.artist.name}</p>
+                
             </div>
         </div>
         </Link>
