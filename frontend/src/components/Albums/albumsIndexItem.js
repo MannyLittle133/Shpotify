@@ -17,6 +17,7 @@ const AlbumsIndexItem = ({ album }) => {
         </div>
         </Link>
     )
+
     
 }
 
