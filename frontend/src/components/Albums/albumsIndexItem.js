@@ -19,5 +19,4 @@ const AlbumsIndexItem = ({ album }) => {
     )
 }
 
-
 export default AlbumsIndexItem;
