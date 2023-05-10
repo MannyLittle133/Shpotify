@@ -17,8 +17,6 @@ const AlbumsIndexItem = ({ album }) => {
         </div>
         </Link>
     )
-
-    
 }
 
 export default AlbumsIndexItem;
